@@ -5,3 +5,4 @@ This is a project for the Gebeya 3 months bootcamp training and to be continued 
 
 ## Authors
 [Sertsedengle Shewandagn](https://linkedin.com/in/sertse/)
+[Amanuel Admassu](https://www.linkedin.com/in/amanueladmassu/)
