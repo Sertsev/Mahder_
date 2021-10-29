@@ -7,9 +7,12 @@
 <head runat="server">
     <title>MAHIDER - Ethiopian Businesses Info Directory</title>
     <link href="~/main.css" rel="stylesheet" />
+    <link href="~/nav.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="~/nav.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
     <style type="text/css">
         #profilePicture {
             width: 199px;
@@ -22,9 +25,27 @@
 </head>
 <body>
     <nav>
-        <img alt="" src="" />
+        <div class="main-menu">
+            <ul>
+                <li><a class="my-mnu" href="#">Home</a></li>
+                <li><a class="my-mnu" href="~/catagories">Catagories</a>
+                    <%--<ul>
+                        <li>
+                            <a href="#">Busines Type</a>
+                        </li>
+                        <li>
+                            <a href="#">By Location</a>
+                        </li>
+                    </ul>--%>
+                </li>
+                <li><a class="my-mnu" href="~/featured">Featured</a></li>
+                <li><a class="my-mnu" href="#Contact">Contact</a></li>
+                <li><a class="my-mnu" href="~/about">About</a></li>
+            </ul>
+            <button class="custom-btn btn-5 btn-flt-rt" type="button" data-toggle="modal" data-target="#myModal" tabindex="-1">Add Business Info </button>
+        </div>
     </nav>
-    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal" tabindex="-1"> Add Business Info </button>
+
 
     <form id="addInfo" runat="server">
         <div id="myModal" class="modal fade">
@@ -54,21 +75,38 @@
                                     </tr>
                                     <tr>
                                         <td>
+                                            <label>Business Catagory: </label>
+                                        </td>
+                                        <td>
+                                            <%--<asp:DropDownList ID="businessCatagory" runat="server"></asp:DropDownList>--%>
+                                            <select id="businessCatagory">
+                                                <option>Finance</option>
+                                                <option>Health</option>
+                                                <option>Real State</option>
+                                                <option>Hotel and Accomodation Service</option>
+                                            </select>
+                                            <%--<asp:TextBox ID="businessCatagor" runat="server"></asp:TextBox>--%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <label>Business Type: </label>
                                         </td>
                                         <td>
                                             <asp:TextBox ID="businessType" runat="server"></asp:TextBox></td>
                                     </tr>
                                     <tr>
+
                                         <td>
-                                            <label>Business Description: </label>
+                                            <asp:Label ID="aboutLable" runat="server" Text="Business Description: "></asp:Label>
                                         </td>
                                         <td>
-                                            <textarea id="about" rows="2"></textarea></td>
+                                            <textarea id="about" rows="2"></textarea>
+
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="aboutLable" runat="server" Text="Business Address: "></asp:Label>
+                                            <label>Business Address: </label>
                                         </td>
                                         <td>
                                             <asp:TextBox ID="address" runat="server"></asp:TextBox></td>
@@ -159,21 +197,21 @@
                                             <input type="file" id="profilePicture" name="profilePicture" />
                                         </td>
                                     </tr>
-                                    <%--                <tr>
-                    <td>
-
-                    </td>
-                    <td>
-                        <asp:Button ID="ppUpload" type="submit" Text="Upload" runat="server" CLASS="btn"></asp:Button>
-                    </td>
-                </tr>--%>
+                                    <%--<tr>
+                                        <td></td>
+                                        <td>
+                                            <asp:Button ID="ppUpload" type="submit" Text="Upload" runat="server" CLASS="btn"></asp:Button>
+                                        </td>
+                                    </tr>--%>
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <asp:Button ID="add" runat="server" Text="Submit" CLASS="btn" OnClick="add_Click" />
+                                            
                                         </td>
                                     </tr>
                                 </table>
+                                
+                                <asp:Button ID="add" runat="server" Text="Submit" CLASS="custom-btn btn-5 btn-hov" OnClick="add_Click" />
                             </div>
                         </div>
                     </div>
@@ -181,14 +219,15 @@
             </div>
         </div>
         <div>
-            <asp:GridView ID="BanksList" runat="server" Width="227px"></asp:GridView>
+            <asp:GridView ID="BanksList" CssClass="banks list" PagerStyle-CssClass="pager"
+ HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" runat="server"></asp:GridView>
         </div>
 
     </form>
 
-   
 
-<%--    <asp:Button ID="updt" runat="server" Text="Edit" CLASS="btn" />
+
+    <%--    <asp:Button ID="updt" runat="server" Text="Edit" CLASS="btn" />
     <asp:Button ID="delt" runat="server" Text="Delete" CLASS="btn" />--%>
 </body>
 </html>

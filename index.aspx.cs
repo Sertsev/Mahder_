@@ -28,8 +28,8 @@ namespace Mahder_
             aboutLable.Text = Request.Form["about"];
             SqlCommand cmd = bankcon.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Banks(businessName, ownerFullName, businesstype, about, address, woreda, region, city, phonNumber1, phonNumber2, twitterUname, facebookUname, website)" +
-                "values('" + businessName.Text + "', '" + ownerFullName.Text + "', '" + businessType.Text + "', '" + aboutLable.Text + "', '" + address.Text + "', '" + woreda.Text + "', '"+ region.Text +"', '" + city.Text + "', '" + phoneNumber1.Text + "', '" + phoneNumber2.Text + "', '" + twitterUname.Text + "', '" + facebookUname.Text + "', '" + website.Text + "')";
+            cmd.CommandText = "insert into Banks(businessName, ownerFullName, businesstype, about, address, woreda, region, city, phonNumber1, phonNumber2, twitterUname, facebookUname, telegramUname, instagramUname, linkedinUname, website)" +
+                "values('" + businessName.Text + "', '" + ownerFullName.Text + "', '" + businessType.Text + "', '" + aboutLable.Text + "', '" + address.Text + "', '" + woreda.Text + "', '"+ region.Text +"', '" + city.Text + "', '" + phoneNumber1.Text + "', '" + phoneNumber2.Text + "', '" + twitterUname.Text + "', '" + facebookUname.Text + "', '" + telegramUname.Text + "', '" + instagramUname.Text + "', '" + linkedinUname.Text + "', '" + website.Text + "')";
             cmd.ExecuteNonQuery();
 
             businessName.Text = "";
