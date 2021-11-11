@@ -1,0 +1,34 @@
+﻿.footer {
+    width: 99.4vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(148, 95, 233);
+    color: blanchedalmond;
+    bottom: 0px;
+    padding: 20px;
+    margin: 8px -8px -8px -8px;
+    animation: navbar 7s infinite;
+}
+
+.copyright {
+    border-top: 2px groove gold;
+    padding-top: 20px;
+}
+
+.copy_text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer > h1 {
+    text-align: center;
+    border-bottom: 2px groove gold;
+}
+
+.footer p {
+    padding: 0 10px;
+    text-align: justify;
+    font-size: 18px;
+}

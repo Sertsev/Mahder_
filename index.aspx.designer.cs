@@ -15,6 +15,24 @@ namespace Mahder_
     {
 
         /// <summary>
+        /// container control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl container;
+
+        /// <summary>
+        /// second control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl second;
+
+        /// <summary>
         /// addInfo control.
         /// </summary>
         /// <remarks>
@@ -166,6 +184,15 @@ namespace Mahder_
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox website;
+
+        /// <summary>
+        /// profilePicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload profilePicture;
 
         /// <summary>
         /// add control.

@@ -1,0 +1,168 @@
+﻿* {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: darkgoldenrod;
+}
+
+body {
+    background: #283048;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav_mp {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button_mp {
+    padding: 5px;
+    margin: 10px;
+}
+
+.div_mp {
+    padding: 10px;
+    margin: 20px;
+}
+
+.text_mp {
+    padding: 5px;
+    margin: 3px;
+}
+
+
+/********************************************************************
+                    Container or div Styles
+*********************************************************************/
+
+.container_s {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    top: 90px;
+}
+
+.box_left {
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+}
+
+.box_right {
+    flex: 50%;
+}
+
+.box_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+
+/*******************************************************************
+                Input field css
+********************************************************************/
+
+.inp_f {
+    width: 65%;
+    outline: none;
+    border-bottom: 3px solid rgb(0, 0, 0, 0);
+    padding: 9px 17px;
+    border-radius: 9px;
+    color: dimgray;
+    font-size: 18px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+    .inp_f:hover,
+    .inp_f:focus {
+        border-bottom: 3px solid gold;
+        background-color: rgb(15, 15, 15);
+        color: goldenrod;
+    }
+
+/********************************************************************
+                Button Styles
+*********************************************************************/
+.custom-btn {
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: large;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn-hov:hover {
+    border: 2px groove #f0094a;
+}
+
+.btn-flt-rt {
+    float: right;
+    margin-right: 15px;
+}
+
+.btn-5 {
+    height: 40px;
+    line-height: initial;
+    padding: 5px 10px;
+    border: none;
+    background: #573e01;
+    background: linear-gradient(30deg, #DBA00E 0%, #573e01 100%);
+}
+
+    .btn-5:hover {
+        color: darkgoldenrod;
+        background: transparent;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    .btn-5:before,
+    .btn-5:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background-color: darkgoldenrod;
+        /*box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;*/
+        transition: 400ms ease all;
+    }
+
+    .btn-5:after {
+        right: inherit;
+        top: inherit;
+        left: 0;
+        bottom: 0;
+    }
+
+    .btn-5:hover:before,
+    .btn-5:hover:after {
+        width: 100%;
+        transition: 800ms ease all;
+        text-decoration: none;
+    }
+
+
